@@ -1,0 +1,38 @@
+SQL Lesson 4: Filtering and sorting Query results
+
+Syntax, 
+
+Select query with ordered results
+SELECT column, another_column, …
+FROM mytable
+WHERE condition(s)
+ORDER BY column ASC/DESC;
+
+Select query with limited rows
+SELECT column, another_column, …
+FROM mytable
+WHERE condition(s)
+ORDER BY column ASC/DESC
+LIMIT num_limit OFFSET num_offset;
+
+
+Example, 
+1.List all directors of Pixar movies (alphabetically), without duplicates
+SELECT DISTINCT director FROM movies
+ORDER BY director ASC;
+
+2.List the last four Pixar movies released (ordered from most recent to least)
+SELECT TITLE, YEAR FROM movies
+ORDER BY YEAR DESC
+LIMIT 4;
+
+3.List the first five Pixar movies sorted alphabetically
+SELECT TITLE FROM movies
+ORDER BY TITLE ASC
+LIMIT 5;
+
+4.List the next five Pixar movies sorted alphabetically
+SELECT TITLE FROM movies
+ORDER BY TITLE ASC
+LIMIT 5
+OFFSET 5;
