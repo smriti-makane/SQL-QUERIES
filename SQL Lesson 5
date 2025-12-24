@@ -1,0 +1,26 @@
+SQL Lesson 5: Multi-table queries with JOINs
+
+Syntax, 
+Select query with INNER JOIN on multiple tables
+SELECT column, another_table_column, …
+FROM mytable
+INNER JOIN another_table 
+    ON mytable.id = another_table.id
+WHERE condition(s)
+ORDER BY column, … ASC/DESC
+LIMIT num_limit OFFSET num_offset;
+
+Examples, 
+1.Find the domestic and international sales for each movie
+SELECT title , domestic_sales, international_sales FROM movies
+inner join boxoffice on id = movie_id;
+
+2.Show the sales numbers for each movie that did better internationally rather than domestically
+SELECT title , domestic_sales, international_sales FROM movies
+inner join boxoffice on id= movie_id
+where domestic_sales<international_sales; 
+
+3.List all the movies by their ratings in descending order
+SELECT title, rating FROM movies
+inner join boxoffice on id=movie_id
+Order by rating DESC;
