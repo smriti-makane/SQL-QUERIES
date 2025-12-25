@@ -1,0 +1,19 @@
+SQL Lesson 9: Queries with expressions
+
+Synatx, 
+SELECT particle_speed / 2.0 AS half_particle_speed
+FROM physics_data
+WHERE ABS(particle_position) * 10.0 > 500;
+
+1.List all movies and their combined sales in millions of dollars
+SELECT title , (domestic_sales+ international_sales)/1000000 AS total_Sales
+from movies inner join boxoffice on id = movie_id;
+
+2.List all movies and their ratings in percent
+SELECT title , rating*10 AS ALL_RATINGS FROM movies
+inner join boxoffice on id = movie_id ;
+
+3.List all movies that were released on even number years
+SELECT title , year as Movie_years FROM movies
+inner join boxoffice on id = movie_id
+where year % 2 == 0;
