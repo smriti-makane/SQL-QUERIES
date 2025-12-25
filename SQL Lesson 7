@@ -1,4 +1,4 @@
-SQL Lesson 9: Queries with expressions
+SQL Lesson 7: Queries with expressions
 
 Synatx, 
 SELECT particle_speed / 2.0 AS half_particle_speed
