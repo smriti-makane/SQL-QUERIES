@@ -1,0 +1,28 @@
+SQL Lesson 14: Altering tables
+
+Syntax, 
+
+Altering table to add new column(s)
+ALTER TABLE mytable
+ADD column DataType OptionalTableConstraint 
+    DEFAULT default_value;
+
+Altering table to remove column(s)
+ALTER TABLE mytable
+DROP column_to_be_deleted;
+
+Altering table name
+ALTER TABLE mytable
+RENAME TO new_table_name;
+
+
+Exercise 14 — Tasks
+1.Add a column named Aspect_ratio with a FLOAT data type to store the aspect-ratio each movie was released in. 
+ALTER TABLE Movies
+ADD column Aspect_ratio OptionalTableConstraint 
+    FLOAT default_value;
+
+
+2.Add another column named Language with a TEXT data type to store the language that the movie was released in. Ensure that the default for this language is English.
+Alter table Movies
+ADD column Language default english; 
